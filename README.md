@@ -1,27 +1,33 @@
 # F-15E WSO downloads
 
-Official public downloads for F-15E WSO. This repository hosts installers and update feeds. The development source remains private.
+Public installers and update feeds for F-15E WSO. Development source remains private.
 
-## First installation
+## Installation and updates
 
-1. Close DCS and Goose.
-2. Download [F-15E WSO 1.1.185-beta.2](https://github.com/TheDFD/F-15E-WSO-Releases/releases/tag/beta-v1.1.185-beta.2) and run the installer.
-3. Open **Settings > Updates** and choose **Beta** or **Stable**.
+Close DCS and Goose, then download and run the [1.1.185-beta.3 installer](https://github.com/TheDFD/F-15E-WSO-Releases/releases/tag/beta-v1.1.185-beta.3). Older clients without the update feature need this one manual installation. No GitHub account or token is required.
 
-Existing 1.1.184 clients need this one manual installation to enable automatic updates. No GitHub account or access token is required.
+Under **Settings > Updates**, choose **Beta** for numbered test releases or **Stable** for approved releases. Stable has no published installer yet. Selecting an unpublished channel leaves your installed version in place.
 
-## Update channels
+Goose checks shortly after startup and every 30 minutes while running. Automatic installation waits until DCS is closed; Windows may request administrator approval. You can turn automatic installation off. Downloads are checked for version, channel, size and SHA-256. A published Stable release can replace an installed Beta when Stable is selected.
 
-| Channel | Releases |
-| --- | --- |
-| Beta | Numbered test builds, beginning with `1.1.185-beta.2`. |
-| Stable | Approved releases. |
+## Monitor placement
 
-Goose checks for updates shortly after startup and every 30 minutes while running. With automatic installation enabled, updates wait until DCS is closed. Windows may request administrator approval. The selected channel is remembered, and automatic installation can be turned off in Settings.
+**Settings > Overlay display** remembers your monitor and menu position. Choose the DCS window, primary monitor or a connected display, then one of nine positions. Disconnected displays fall back to primary while retaining your saved choice. Use **Refresh monitors** after changing your layout. The optional status card opens on the same monitor and can be dragged separately.
 
-If a channel has no published installer, selecting it leaves the installed version in place. A published Stable release can replace an installed Beta when Stable is selected.
+## VR setup: SteamVR and OpenXR
 
-Downloads use HTTPS and are checked for version, channel, file size and SHA-256 before installation. The update system retains the stock F-15E module files. This Beta preserves the flight code, overlay renderer, DCS scripts and audio from 1.1.184.
+VR requires the separately installed [OpenKneeboard companion](https://openkneeboard.com/). Goose supplies a persistent capture source; OpenKneeboard supplies headset rendering and placement.
+
+1. Start Goose, DCS and OpenKneeboard with normal Windows user privileges.
+2. Enable **Settings > Overlay display > VR capture window** in Goose.
+3. In OpenKneeboard, add a **Window Capture** tab for **F-15E WSO VR Menu**. Enable **Capture client area** to exclude its title bar.
+4. Enable the appropriate SteamVR or OpenXR support in OpenKneeboard for the runtime used by DCS. Set headset position, size and recenter there.
+5. Keep the capture source open and unminimized. Desktop monitor placement and headset placement are separate.
+
+Use your existing WSO open/select, slew and Back bindings. Menus, target choices, confirmations and radio entry share the source window. Its handle survives menu closing; **Show VR capture window** reopens the source if you close its title bar. The optional **F-15E WSO VR Status** card needs a separate capture tab.
+
+Follow the companion's [window-capture guide](https://openkneeboard.com/features/window-capture/), [capture compatibility notes](https://openkneeboard.com/troubleshooting/window-capture-compatibility/) and [SteamVR/OpenXR instructions](https://github.com/OpenKneeboard/OpenKneeboard/blob/master/docs/troubleshooting/steamvr-or-openxr.md).
+
+This Beta has automated Windows capture-window, input and placement checks. Live headset rendering, motion-controller pointing, multiplayer-server compatibility and the real installer/UAC upgrade cycle still need testing. Goose does not install a VR companion or change your runtime. This feature preserves the existing flight logic, DCS scripts and audio and does not modify F-15E module files.
 
 [All releases](https://github.com/TheDFD/F-15E-WSO-Releases/releases)
-
