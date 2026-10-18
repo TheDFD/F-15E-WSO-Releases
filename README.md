@@ -4,7 +4,11 @@ Public installers and update feeds for F-15E WSO. Development source remains pri
 
 ## Installation and updates
 
-Close DCS and Goose, then download and run the [1.1.185-beta.3 installer](https://github.com/TheDFD/F-15E-WSO-Releases/releases/tag/beta-v1.1.185-beta.3). Older clients without the update feature need this one manual installation. No GitHub account or token is required.
+Close DCS and Goose, then download and run the [1.1.186-beta.1 installer](https://github.com/TheDFD/F-15E-WSO-Releases/releases/tag/beta-v1.1.186-beta.1). Older clients without the update feature need this one manual installation. No GitHub account or token is required.
+
+This Beta adds the requested snowplow → UFC coordinate point → TPOD PB17 flow for A/G Nearest and Waypoint. Nearest uses a verified empty `.C` target point; Waypoint uses the existing point. Both LANTIRN and LITENING stop after cueing, without zoom, manual slew or automatic designation. Occupied points are preserved.
+
+A/A Next verifies 4TWS and uses Coolie UP on a visible front radar page. A/A Previous, PACS Link and A/G Picture are removed from the menu. CTAF is R1 305 / R2 251 AM. Purple becomes Black / MPD Green, Settings controls are clearer, and repeated volume-slider saves are coalesced. Short spike/launch alerts precede optional descriptions; confirmed splash reports survive new cockpit orders. The existing explicit STOP quiet policy remains.
 
 Under **Settings > Updates**, choose **Beta** for numbered test releases or **Stable** for approved releases. Stable has no published installer yet. Selecting an unpublished channel leaves your installed version in place.
 
