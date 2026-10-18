@@ -4,9 +4,11 @@ Public installers and update feeds for F-15E WSO. Development source remains pri
 
 ## Installation and updates
 
-Close DCS and Goose, then download and run the [1.1.186-beta.1 installer](https://github.com/TheDFD/F-15E-WSO-Releases/releases/tag/beta-v1.1.186-beta.1). Older clients without the update feature need this one manual installation. No GitHub account or token is required.
+Close DCS and Goose, then download and run the [1.1.186-beta.2 installer](https://github.com/TheDFD/F-15E-WSO-Releases/releases/tag/beta-v1.1.186-beta.2). Older clients without the update feature need this one manual installation. No GitHub account or token is required.
 
-This Beta adds the requested snowplow → UFC coordinate point → TPOD PB17 flow for A/G Nearest and Waypoint. Nearest uses a verified empty `.C` target point; Waypoint uses the existing point. Both LANTIRN and LITENING stop after cueing, without zoom, manual slew or automatic designation. Occupied points are preserved.
+Beta 2 adds an installer/startup compatibility fix for the reproduced �parent process has different executable� error. It updates the startup loader and isolates installer maintenance launches. Flight/WSO/UI behavior and resources are unchanged from Beta 1. This does not add code signing; Unknown publisher and SmartScreen are separate. The full real installer/UAC cycle still needs testing.
+
+This release retains the requested snowplow → UFC coordinate point → TPOD PB17 flow for A/G Nearest and Waypoint. Nearest uses a verified empty `.C` target point; Waypoint uses the existing point. Both LANTIRN and LITENING stop after cueing, without zoom, manual slew or automatic designation. Occupied points are preserved.
 
 A/A Next verifies 4TWS and uses Coolie UP on a visible front radar page. A/A Previous, PACS Link and A/G Picture are removed from the menu. CTAF is R1 305 / R2 251 AM. Purple becomes Black / MPD Green, Settings controls are clearer, and repeated volume-slider saves are coalesced. Short spike/launch alerts precede optional descriptions; confirmed splash reports survive new cockpit orders. The existing explicit STOP quiet policy remains.
 
